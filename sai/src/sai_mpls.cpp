@@ -245,7 +245,7 @@ mpls_handler::inseg_next_hop_id_set_internal(std::shared_ptr<lsai_device> sdev,
 
             if (my_rif_entry.type != SAI_ROUTER_INTERFACE_TYPE_MPLS_ROUTER) {
                 la_return_on_error(LA_STATUS_EINVAL, "Trying to set inseg entry pointing to wrong router interface type");
-            }
+            } 
 
             vrf_entry my_vrf_entry{};
             status = sdev->m_vrfs.get(my_rif_entry.vrf_obj, my_vrf_entry);
